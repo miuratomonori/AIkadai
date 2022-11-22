@@ -117,17 +117,17 @@ def main():
         st.caption(f'判定結果：{classNo}番')      # 戻り値の確認（デバッグ用）
 
         # 推論の確率を小数点以下3桁で丸め×100(%に変換)
-        pred0 = round(prediction[0],3) * 100  # 猫の確率(%)
-        pred1 = round(prediction[1],3) * 100  # 犬の確率(%)
-        pred2 = round(prediction[2],3) * 100  # アザラシの確率(%)
+        pred0 = round(prediction[0],3) * 100  # ガンダムの確率(%)
+        pred1 = round(prediction[1],3) * 100  # ガンキャノンの確率(%)
+        pred2 = round(prediction[2],3) * 100  # ガンタンクの確率(%)
 
         # 推論で得られたクラス番号(初期値は0)によって出力結果を分岐
         if classNo == 0:
-            st.subheader(f"これは{pred0}％の確率で「猫」です！")
+            st.subheader(f"これは{pred0}％の確率で「ガンダム」です！")
         elif classNo == 1:
-            st.subheader(f"これは{pred1}％の確率で「犬」です！")
+            st.subheader(f"これは{pred1}％の確率で「ガンキャノン」です！")
         else:
-            st.subheader(f"これは{pred2}％の確率で「アザラシ」です！")
+            st.subheader(f"これは{pred2}％の確率で「ガンタンク」です！")
 
 
 # mainの起動
